@@ -13,7 +13,7 @@ export const myConfig: AuthConfiguration = {
             primaryColor: '#c1343e'
         },
         languageDictionary: {
-            title: 'Active Armadillo Login'
+            title: 'Please Login'
         }
     }
 };
