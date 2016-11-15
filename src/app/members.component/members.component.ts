@@ -5,12 +5,12 @@ import { Member } from '../member';
 import { MembersService } from '../members.service';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-members',
   providers: [ MembersService ],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  templateUrl: './members.component.html',
+  styleUrls: ['./members.component.css']
 })
-export class HomeComponent implements OnInit {
+export class MembersComponent implements OnInit {
   members: Member[];
 
   constructor(private auth: AuthService, private membersService:MembersService) { }

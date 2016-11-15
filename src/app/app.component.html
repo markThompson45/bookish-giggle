@@ -1,13 +1,20 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Auth0 - Angular 2</a>
-      <button class="btn btn-primary btn-margin" (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</button>
-      <button class="btn btn-primary btn-margin" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>
+      <a class="navbar-brand" href="#">
+        <img src="../assets/logo.png" alt="" class="logo">
+      </a>
+      <ul class="nav navbar-nav" *ngIf="auth.authenticated()">
+        <li><a href="#">Providers</a></li>
+        <li><a href="#">Members</a></li>
+        <li><a href="#">Appointments</a></li>
+        <li><a href="#">Reminders</a></li>
+      </ul>
+      <button class="btn btn-default navbar-btn" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>
+      <button class="btn btn-primary btn-default navbar-btn" (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</button>
     </div>
   </div>
 </nav>
-
-<main class="container">
+<main class="container-fluid">
   <router-outlet></router-outlet>
 </main>

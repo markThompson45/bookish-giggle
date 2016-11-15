@@ -1,2 +1,12 @@
-<h4 *ngIf="auth.authenticated()">You are logged in</h4>
-<h4 *ngIf="!auth.authenticated()">You are not logged in, please click 'Log in' button to login</h4>
+<div *ngIf="!auth.authenticated()" class="alert alert-warning fade in">
+    <strong>Warning!</strong> You are not logged in, please click 'Log in' button to login.
+</div>
+<div *ngIf="auth.authenticated()" class="list">
+    <div class="row">
+        <div class="col-sm-3">Mini Calendar Here</div>
+        <div class="col-sm-9">Day Calendar Here</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">25 Providers</div>
+    </div>
+</div>
