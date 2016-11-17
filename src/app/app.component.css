@@ -1,4 +1,12 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
 .logo {
-    margin-top: -19px;
-    margin-left: -20px;
+   margin-top: -10px;
+}
+
+ul.nav {
+    margin-left: 3px;
 }

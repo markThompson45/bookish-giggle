@@ -3,10 +3,18 @@
 </div>
 <div *ngIf="auth.authenticated()" class="list">
     <div class="row">
-        <div class="col-sm-3">Mini Calendar Here</div>
-        <div class="col-sm-9">Day Calendar Here</div>
+        <app-mini-calendar></app-mini-calendar>
+        <app-day-calendar></app-day-calendar>
     </div>
     <div class="row">
-        <div class="col-sm-2">25 Providers</div>
+        <div class="panel panel-info col-sm-2 col-xs-6 panel-height panel-margin">25 Providers Logged in.</div>
+        <div class="panel panel-info col-sm-2 col-xs-6 panel-height panel-margin">250 Active Members</div>
+        <div class="panel panel-info col-sm-4 col-xs-6 panel-height panel-margin">51 Appointments scheduled for tomorrow</div>
+        <div class="panel panel-info col-sm-4 col-xs-6 panel-height panel-margin">No Reminders sent today. 51 Recommended</div>
+    </div>
+    <div class="row">
+        <div class="panel panel-info col-sm-2 col-xs-6 panel-height panel-margin">350 Reminders sent this week.</div>
+        <div class="panel panel-info col-sm-2 col-xs-6 panel-height panel-margin">25 Appointmens missed this week</div>
+        <div class="panel panel-info col-sm-8 col-xs-12 panel-height panel-margin">5% Improvement in attendance for 10% increase in reminders</div>
     </div>
 </div>

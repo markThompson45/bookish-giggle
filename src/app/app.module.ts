@@ -9,11 +9,15 @@ import { AppComponent } from './app.component';
 
 import { HomeComponent } from './home/home.component';
 import { routing, appRoutingProviders } from './app.routes';
+import { MiniCalendarComponent } from './mini-calendar/mini-calendar.component';
+import { DayCalendarComponent } from './day-calendar/day-calendar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    MiniCalendarComponent,
+    DayCalendarComponent
   ],
   imports: [
     BrowserModule,

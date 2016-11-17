@@ -1,0 +1,80 @@
+.day {
+    float: left;
+    margin: 1px;
+    margin-top: .3rem;
+}
+
+.day .panel-body {
+    padding:2px;
+    font-size: 1rem;
+}
+
+.day .panel-body .btn {
+    width: 100%;
+    font-height: .3rem;
+    margin: 1px;
+}
+
+.open-slot {
+    background: lightgrey;
+}
+
+.closed-slot {
+    background: navy;
+}
+
+.reserved-slot {
+    background: lightcoral;
+}
+
+.times {
+    width: 100%;
+}
+
+.units-1 {
+    height: 1rem;
+}
+
+.units-2 {
+    height: 2rem;
+}
+
+.units-3 {
+    height: 3rem;
+}
+
+.units-4 {
+    height: 4rem;
+}
+
+.units-5 {
+    height: 5rem;
+}
+
+.units-6 {
+    height: 6rem;
+}
+
+.units-7 {
+    height: 7rem;
+}
+
+.units-8 {
+    height: 8rem;
+}
+
+.units-9 {
+    height: 9rem;
+}
+
+.units-10 {
+    height: 10rem;
+}
+
+.units-11 {
+    height: 11rem;
+}
+
+.units-12 {
+    height: 12rem;
+}

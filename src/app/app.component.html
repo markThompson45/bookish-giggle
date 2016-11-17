@@ -1,20 +1,36 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <img src="../assets/logo.png" alt="" class="logo">
-      </a>
-      <ul class="nav navbar-nav" *ngIf="auth.authenticated()">
-        <li><a href="#">Providers</a></li>
-        <li><a href="#">Members</a></li>
-        <li><a href="#">Appointments</a></li>
-        <li><a href="#">Reminders</a></li>
-      </ul>
-      <button class="btn btn-default navbar-btn" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>
-      <button class="btn btn-primary btn-default navbar-btn" (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</button>
+    <div class="navbar-header col-xs-12">
+      <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <a class="navbar-brand" href="#">
+            <img src="../assets/logo.png" alt="" class="logo">
+          </a>
+        </div>
+        <div class="col-md-8 col-sm-7 col-xs-12">
+          <ul class="nav navbar-nav" *ngIf="auth.authenticated()">
+            <li><a href="#">Providers</a></li>
+            <li><a href="#">Members</a></li>
+            <li><a href="#">Appointments</a></li>
+            <li><a href="#">Reminders</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-1 col-xs-12">
+          <button class="btn btn-default navbar-btn btn-xs" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>
+          <button class="btn btn-primary btn-default navbar-btn btn-xs" (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</button>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
+<!--
+Bootstrap Column Classes
+Extra small     <576px	
+Small           ≥576px	
+Medium          ≥768px	
+Large           ≥992px	
+Extra large     ≥1200px
+-->
 <main class="container-fluid">
   <router-outlet></router-outlet>
 </main>

@@ -1,0 +1,17 @@
+.btn-cal-other-month {
+    background: lightskyblue;
+    color: grey;
+}
+
+.btn-cal-this-month {
+    background: navy;
+    color: white;
+}
+
+.mini-calendar-table {
+    margin: auto;
+}
+
+td {
+    padding: 2px;
+}
