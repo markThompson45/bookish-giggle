@@ -3,8 +3,11 @@
     <table class="mini-calendar-table">
       <tr>
         <th colspan="7">
-          <div>January</div>
+          <div>{{monthName}}, {{year}}</div>
         </th>
+      </tr>
+      <tr>
+        <td *ngFor="let name of dayNames">{{name}}</td>
       </tr>
       <tr>
         <td><a href="#" class="btn-xs btn-cal-other-month">29</a></td>

@@ -11,13 +11,16 @@ import { HomeComponent } from './home/home.component';
 import { routing, appRoutingProviders } from './app.routes';
 import { MiniCalendarComponent } from './mini-calendar/mini-calendar.component';
 import { DayCalendarComponent } from './day-calendar/day-calendar.component';
+import { PadNumberPipe } from './pad-number.pipe';
+import { DateService } from './date.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MiniCalendarComponent,
-    DayCalendarComponent
+    DayCalendarComponent,
+    PadNumberPipe
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { DayCalendarComponent } from './day-calendar/day-calendar.component';
   ],
   providers: [
     appRoutingProviders,
-    AUTH_PROVIDERS
+    AUTH_PROVIDERS,
+    DateService
   ],
   bootstrap: [AppComponent]
 })
