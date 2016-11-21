@@ -13,6 +13,7 @@ import { MiniCalendarComponent } from './mini-calendar/mini-calendar.component';
 import { DayCalendarComponent } from './day-calendar/day-calendar.component';
 import { PadNumberPipe } from './pad-number.pipe';
 import { DateService } from './date.service';
+import { ServiceProvidersService } from './service-providers.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DateService } from './date.service';
   providers: [
     appRoutingProviders,
     AUTH_PROVIDERS,
-    DateService
+    DateService,
+    ServiceProvidersService
   ],
   bootstrap: [AppComponent]
 })

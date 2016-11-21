@@ -44,7 +44,6 @@ export class DateService {
       for ( let d = 0; d < 7; d++ ) {
         if ( lastMonthCounter < lastMonthDays ) {
           days[w][d] = new CalendarDay();
-          console.log( w + ": " + d + ": " +days );
           days[w][d].date = lastMonthCounter + 1;
           days[w][d].cssClass = "last-month";
           days[w][d].dayOfWeek = d;
@@ -64,6 +63,12 @@ export class DateService {
         }
       }
     }
+
+    // Trim off the last week if it is empty (begins with a 'next-month' day)
+    if(days[5][0].cssClass === 'next-month'){
+      days[5] = null;
+    }
+
     return days;
   }
 

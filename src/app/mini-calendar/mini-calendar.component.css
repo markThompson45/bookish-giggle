@@ -1,9 +1,14 @@
-.btn-cal-other-month {
+.last-month {
     background: lightskyblue;
     color: grey;
 }
 
-.btn-cal-this-month {
+.next-month {
+    background: lightskyblue;
+    color: grey;
+}
+
+.this-month {
     background: navy;
     color: white;
 }
@@ -14,4 +19,8 @@
 
 td {
     padding: 2px;
+}
+
+.btn {
+    font-family: monospace;
 }

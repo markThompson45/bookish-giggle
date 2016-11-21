@@ -6,14 +6,16 @@ import { MembersService } from '../members.service';
 
 @Component({
   selector: 'app-home',
-  providers: [ MembersService ],
+  providers: [ 
+    MembersService
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
   members: Member[];
 
-  constructor(private auth: AuthService, private membersService:MembersService) { }
+  constructor(private auth: AuthService, private membersService:MembersService ) { }
 
   getMembers(): void {
     this.membersService.getMembers().then(members => this.members = members);

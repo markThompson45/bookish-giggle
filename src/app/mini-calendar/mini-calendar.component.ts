@@ -24,6 +24,10 @@ export class MiniCalendarComponent implements OnInit {
     this.year = this.today.getFullYear();
     this.dayOfMonth = this.today.getDate();
     this.dayNames = this.dateService.getDayNames();
+    this.dayNames = this.dayNames.map( this.abbreviate );
   }
 
+  abbreviate( x: string ): string {
+    return x.substr(0, 2);
+  }
 }

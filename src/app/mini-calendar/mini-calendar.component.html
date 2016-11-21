@@ -9,50 +9,14 @@
       <tr>
         <td *ngFor="let name of dayNames">{{name}}</td>
       </tr>
-      <tr>
-        <td><a href="#" class="btn-xs btn-cal-other-month">29</a></td>
-        <td><a href="#" class="btn-xs btn-cal-other-month">30</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">01</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">02</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">03</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">04</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">05</a></td>
-      </tr>
-      <tr>
-        <td><a href="#" class="btn-xs btn-cal-this-month">06</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">07</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">08</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">09</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">10</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">11</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">12</a></td>
-      </tr>
-      <tr>
-        <td><a href="#" class="btn-xs btn-cal-this-month">13</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">14</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">15</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">16</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">17</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">18</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">19</a></td>
-      </tr>
-      <tr>
-        <td><a href="#" class="btn-xs btn-cal-this-month">20</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">21</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">22</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">23</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">24</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">25</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">26</a></td>
-      </tr>
-      <tr>
-        <td><a href="#" class="btn-xs btn-cal-this-month">27</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">28</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">29</a></td>
-        <td><a href="#" class="btn-xs btn-cal-this-month">30</a></td>
-        <td><a href="#" class="btn-xs btn-cal-other-month">01</a></td>
-        <td><a href="#" class="btn-xs btn-cal-other-month">02</a></td>
-        <td><a href="#" class="btn-xs btn-cal-other-month">03</a></td>
+      <tr *ngFor="let week of days">
+        <td *ngFor="let day of week">
+          <a href="#" 
+            class="btn btn-xs {{day.cssClass}}" 
+            [ngClass]="day.cssClass==='this-month' ? btn-primary : ''">
+            {{day.date | padNumber:'&nbsp;&nbsp;'}}
+          </a>
+        </td>
       </tr>
     </table>
   </div>
