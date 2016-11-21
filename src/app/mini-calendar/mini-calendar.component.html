@@ -3,7 +3,7 @@
     <div class="panel-heading">
       <span class="glyphicon glyphicon-chevron-left"></span>
       <select name="month" id="month">
-        <option *ngFor="let month of months" value="{{month.name}}">{{month.name}}</option>
+        <option *ngFor="let month of months; let i=index" value="{{i}}" {{month.name === monthName?}}>{{month.name}}</option>
       </select>, 
       <select name="year" id="year">
         <option value="{{year}}">{{year}}</option>
