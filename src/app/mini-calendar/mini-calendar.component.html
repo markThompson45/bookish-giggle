@@ -1,23 +1,39 @@
-<div class="col-md-3 col-sm-4 col-xs-12 panel panel-info panel-margin">
-  <div class="text-center">
-    <table class="mini-calendar-table">
-      <tr>
-        <th colspan="7">
-          <div>{{monthName}}, {{year}}</div>
-        </th>
-      </tr>
-      <tr>
-        <td *ngFor="let name of dayNames">{{name}}</td>
-      </tr>
-      <tr *ngFor="let week of days">
-        <td *ngFor="let day of week">
-          <a href="#" 
-            class="btn btn-xs {{day.cssClass}}" 
-            [ngClass]="day.cssClass==='this-month' ? btn-primary : ''">
-            {{day.date | padNumber:'&nbsp;&nbsp;'}}
-          </a>
-        </td>
-      </tr>
-    </table>
+<div class="col-md-3 col-sm-4 col-xs-12">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <select name="month" id="month">
+        <option *ngFor="let month of months" value="{{month.name}}">{{month.name}}</option>
+      </select>, 
+      <select name="year" id="year">
+        <option value="{{year}}">{{year}}</option>
+        <option value="{{year + 1}}">{{year + 1}}</option>
+      </select>
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </div>
+    <div class="panel-body">
+      <table class="mini-calendar-table">
+        <tr>
+          <th *ngFor="let name of dayNames">{{name | slice:0:2}}</th>
+        </tr>
+        <tr *ngFor="let week of days">
+          <td *ngFor="let day of week">
+            <a href="#" 
+              *ngIf="day.cssClass!='this-month'"
+              class="btn btn-xs {{day.cssClass}}"
+            >
+              {{day.date | padNumber:'&nbsp;&nbsp;'}}
+            </a>
+            <a href="#" 
+              *ngIf="day.cssClass==='this-month'"
+              class="btn btn-xs btn-primary {{day.cssClass}}" 
+              (click)="dayClicked(monthName + ' ' + day.date + ', ' + year)"
+            >
+              {{day.date | padNumber:'&nbsp;&nbsp;'}}
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>

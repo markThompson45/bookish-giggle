@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { DateService } from '../date.service';
 import { CalendarDay } from '../calendar-day';
+import { Month } from '../Month';
 
 @Component({
   selector: 'app-mini-calendar',
@@ -15,19 +16,24 @@ export class MiniCalendarComponent implements OnInit {
   year: number;
   dayOfMonth: number;
   dayNames: string[];
+  months: Month[];
 
   constructor( private dateService: DateService ) { }
 
   ngOnInit() {
-    this.days = this.dateService.getDays( this.today );
-    this.monthName = this.dateService.getMonth( this.today );
-    this.year = this.today.getFullYear();
-    this.dayOfMonth = this.today.getDate();
-    this.dayNames = this.dateService.getDayNames();
-    this.dayNames = this.dayNames.map( this.abbreviate );
+    this.getDateInfo( this.today );
   }
 
-  abbreviate( x: string ): string {
-    return x.substr(0, 2);
+  getDateInfo( date: Date ) {
+    this.days = this.dateService.getDays( date );
+    this.monthName = this.dateService.getMonth( date );
+    this.year = date.getFullYear();
+    this.dayOfMonth = date.getDate();
+    this.dayNames = this.dateService.getDayNames();
+    this.months = this.dateService.getMonths();
+  }
+
+  dayClicked(date: number){
+    alert(date);
   }
 }

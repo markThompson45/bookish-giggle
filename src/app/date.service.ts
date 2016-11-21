@@ -8,18 +8,18 @@ export class DateService {
   dayNames: string[] = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ];
 
   months: Month[] = [
-    { name: 'January',    abbreviation: 'Jan', days: 31 },
-    { name: 'February',   abbreviation: 'Feb', days: 28 },
-    { name: 'March',      abbreviation: 'Mar', days: 31 },
-    { name: 'April',      abbreviation: 'Apr', days: 30 },
-    { name: 'May',        abbreviation: 'May', days: 31 },
-    { name: 'June',       abbreviation: 'Jun', days: 30 },
-    { name: 'July',       abbreviation: 'Jul', days: 31 },
-    { name: 'August',     abbreviation: 'Aug', days: 31 },
-    { name: 'September',  abbreviation: 'Sep', days: 30 },
-    { name: 'October',    abbreviation: 'Oct', days: 31 },
-    { name: 'November',   abbreviation: 'Nov', days: 30 },
-    { name: 'December',   abbreviation: 'Dec', days: 31 }
+    { name: 'January',    days: 31 },
+    { name: 'February',   days: 28 },
+    { name: 'March',      days: 31 },
+    { name: 'April',      days: 30 },
+    { name: 'May',        days: 31 },
+    { name: 'June',       days: 30 },
+    { name: 'July',       days: 31 },
+    { name: 'August',     days: 31 },
+    { name: 'September',  days: 30 },
+    { name: 'October',    days: 31 },
+    { name: 'November',   days: 30 },
+    { name: 'December',   days: 31 }
   ];
 
   getDays( date: Date = new Date() ): CalendarDay[][] {
@@ -88,6 +88,10 @@ export class DateService {
 
   getDayNames(): string[] {
     return this.dayNames;
+  }
+
+  getMonths(): Month[] {
+    return this.months;
   }
 
   constructor() { }

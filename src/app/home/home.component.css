@@ -5,3 +5,12 @@
 .panel-margin {
     margin: .2rem;
 }
+
+.panel-padding {
+    padding: 1rem;
+}
+
+.text-center {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}

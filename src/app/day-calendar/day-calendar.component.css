@@ -1,25 +1,22 @@
-.test {
-    border: 1px solid black;
+.day-calendar-row {
+    padding: auto;
+    margin: auto;
 }
 
 .day {
     float: left;
-    margin: 1px;
-    margin-top: .3rem;
+    margin-left: .2rem;
+    margin-right: .2rem;
 }
 
 .day .panel-body {
-    padding:2px;
-    font-size: 1rem;
+    padding: 0px;
 }
 
-.day .panel-body .btn {
-    width: 100%;
-    /*font-size: .8rem;*/
-    color: darkslategray;
-    border-top: 1px solid white;
-    border-bottom: 1px solid darkslategrey;
-    padding: 2px;
+slot {
+    border-top: 1px solid #EEE;
+    border-bottom: 1px solid #111;
+    float: none;
 }
 
 .open-slot {
